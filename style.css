@@ -1,12 +1,10 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-body{
+body {
   width: 100vw;
   height: 100vh;
   margin: 0;
@@ -37,32 +35,62 @@ li {
   }
 }
 
-
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
-
-.container{
-
-    padding: 20px;
-    background-color: #ffff ;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
+.buttons {
+  margin: 30px 0;
+  display: flex;
+  gap: 40px;
 }
 
-button{
-padding: 10px;
-font-size: 40px;
-cursor: pointer;
+p {
+  margin-top: 10px;
+  font-weight: bold;
+}
 
+.container {
+  padding: 20px;
+  background-color: #ffff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
 
+button {
+  padding: 10px;
+  font-size: 50px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+#pedra {
+  background-color: rgb(132, 71, 1);
+}
+
+#papel {
+  background-color: rgb(6, 200, 206);
+}
+
+#tesoura {
+  background-color: rgb(230, 233, 4);
+}
+.you-score span {
+  color: rgb(47, 90, 229);
+}
+
+.machine-score span {
+  color: rgb(228, 111, 15);
 }
