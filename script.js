@@ -1,5 +1,5 @@
+const result = document.querySelector('.result');
 
-const ul = document.querySelector("ul");
 
 const random = (min, max) => Math.random() * (max - min) + min;
 
@@ -27,4 +27,30 @@ for (let i = 0; i < 50; i++) {
                                                    ${Math.random()}, ${Math.random()})`;
 
   ul.appendChild(li);
+}
+
+const playHuman = (humanChoice) => {
+  console.log(humanChoice);
+};
+
+const playMachine = () => {
+  const choices = ["pedra", "papel", "tesoura"];
+  const randomNumber = Math.floor(Math.random() * 3);
+  return choices[randomNumber];
+};
+
+const playTheGame = (human, machine) => {
+
+  console.log('Humano:' + human + "maquina:" + machine )
+if(human === machine){
+result.innerHTML = "Deu empate!"
+
+}else if(Quando o humando ganha){
+result.innerHTML= "você ganhou!"
+
+}else {
+result.innerHTML = "Você perdeu para o James!"
+
+}
+
 }
