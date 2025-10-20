@@ -5,6 +5,7 @@
 }
 
 body {
+  background: url(https://picsum.photos/seed/nature2/1600/900);
   width: 100vw;
   height: 100vh;
   margin: 0;
@@ -14,19 +15,6 @@ body {
   justify-content: center;
   align-items: center;
   padding: 20px;
-}
-
-
-
-.buttons {
-  margin: 30px 0;
-  display: flex;
-  gap: 40px;
-}
-
-p {
-  margin-top: 10px;
-  font-weight: bold;
 }
 
 .container {
@@ -39,8 +27,17 @@ p {
   justify-content: center;
   max-width: 90vw;
   width: 100%;
-  position: relative; /* ou remova completamente */
+}
 
+.buttons {
+  margin: 30px 0;
+  display: flex;
+  gap: 40px;
+}
+
+p {
+  margin-top: 10px;
+  font-weight: bold;
 }
 
 button {
@@ -67,10 +64,64 @@ button:hover {
 #tesoura {
   background-color: rgb(230, 233, 4);
 }
+
 .you-score span {
   color: rgb(47, 90, 229);
 }
 
 .machine-score span {
   color: rgb(228, 111, 15);
+}
+
+/* --------- Responsividade --------- */
+
+@media (max-width: 800px) {
+  .container {
+    max-width: 98vw;
+    padding: 10px;
+  }
+  
+  .buttons {
+    gap: 20px;
+  }
+
+  button {
+    font-size: 36px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    flex-direction: column;
+    padding: 5px;
+    height: auto;
+    min-height: 100vh;
+    background-size: cover;
+  }
+
+  .container {
+    padding: 8px;
+    max-width: 100vw;
+    border-radius: 5px;
+  }
+
+  .buttons {
+    gap: 10px;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  button {
+    font-size: 28px;
+    padding: 6px;
+    width: 90vw;
+    max-width: 200px;
+  }
+
+  p {
+    font-size: 1rem;
+    text-align: center;
+  }
 }
