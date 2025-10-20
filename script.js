@@ -26,8 +26,10 @@ const playTheGame = (human, machine) => {
 
   console.log('Humano:' + human + "Maquina:" + machine )
 
+  let maquinaEscolha = `James escolheu: ${machine}<br>`;
+
   if(human === machine){
-result.innerHTML = "Deu empate!"
+result.innerHTML = maquinaEscolha + "Deu empate!"
 
 }else if(
 (human === GAME_OPTIONS.PAPEL && machine === GAME_OPTIONS.PEDRA) ||
@@ -36,13 +38,13 @@ result.innerHTML = "Deu empate!"
 ){
   humanScoreNumber++;
   yourScore.innerHTML = humanScoreNumber;
-result.innerHTML= "você ganhou!"
+result.innerHTML= maquinaEscolha + "você ganhou!"
 
 }else {
 
   machineScoreNumber++;
   machineScore.innerHTML = machineScoreNumber;
-result.innerHTML = "Você perdeu para o James!"
+result.innerHTML = maquinaEscolha + "Você perdeu para o James!"
 
 }
 
